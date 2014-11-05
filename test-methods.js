@@ -16,8 +16,8 @@ if (Meteor.isClient) {
   });
 
   Collections.find().observe({
-	added: function (document) {
+    added: function (document) {
       new Meteor.Collection('collections.' + document.collection);
-	}
+    }
   });
 }
